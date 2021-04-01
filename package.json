@@ -1,7 +1,7 @@
 {
   "name": "crooka-lab-backend",
   "version": "1.0.0",
-  "description": "Back end Mobile app to allow citizens to report there own car accidents",
+  "description": "Back end for Mobile app to allow citizens to report there own car accidents",
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
