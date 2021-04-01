@@ -5,7 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm set-local-env && ts-node index.ts",
+    "start": "npm run set-local-env && ts-node index.ts",
     "set-local-env": "bash ./scripts/json-env.bash development" 
   },
   "keywords": [
