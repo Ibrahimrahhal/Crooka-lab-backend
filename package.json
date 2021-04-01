@@ -1,0 +1,23 @@
+{
+  "name": "crooka-lab-backend",
+  "version": "1.0.0",
+  "description": "Back end Mobile app to allow citizens to report there own car accidents",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node index.ts"
+  },
+  "keywords": [
+    "node.js",
+    "typescript",
+    "modeling",
+    "cross-platform",
+    "car-accidents"
+  ],
+  "author": "Ibrahim Rahhal <ibrahim.rahhal3636@gmail.com>",
+  "license": "none",
+  "dependencies": {
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
+  }
+}
