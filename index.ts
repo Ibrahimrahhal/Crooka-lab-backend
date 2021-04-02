@@ -48,4 +48,5 @@ namespace CrookaServer {
     }
 }
 
-CrookaServer.init(3000);
+const { PORT } = process.env;
+CrookaServer.init(PORT);

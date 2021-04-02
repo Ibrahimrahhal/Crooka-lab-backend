@@ -1,3 +1,4 @@
 {
-    "example": true
+    "SECRET": "dummy_token_secrets_for_dev",
+    "PORT": 3000
 }

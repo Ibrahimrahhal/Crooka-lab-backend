@@ -1,6 +1,9 @@
 import * as Express from 'express';
-module.exports = [] as Array<{
+import SecurityRouter from './security';
+
+module.exports = [{
+    handler: SecurityRouter
+}] as Array<{
     match?:string,
-    method?:string,
-    router: Express.Router
+    handler: Express.RequestHandler
 }>;
