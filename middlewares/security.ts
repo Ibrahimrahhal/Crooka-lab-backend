@@ -1,4 +1,4 @@
-import Express from 'express';
+import * as Express from 'express';
 import { verify } from '../services/token-service';
 
 export default (req: Express.Request, res: Express.Response, next: any) => {
@@ -7,6 +7,6 @@ export default (req: Express.Request, res: Express.Response, next: any) => {
         next();
         return;
     }
-    res.sendStatus(400);
+    res.sendStatus(401);
     return;
 }
