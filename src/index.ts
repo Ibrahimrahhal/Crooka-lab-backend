@@ -1,8 +1,9 @@
-import * as Express from 'express';
+import Express from 'express';
 namespace CrookaServer {
     class Server {
-        private app:Express.Application
-        init(port) {
+        private app!: Express.Application;
+
+        init(port: number) {
             this.app = Express();
             const routes = this.routes;
             const middlewares = this.middlewares;
@@ -16,7 +17,7 @@ namespace CrookaServer {
         registerRoutes(routes:Array<{
             match: string,
             router: Express.Router,
-            method: string
+            method: "get" | "post" | "delete" | "put"
         }>, app: Express.Application) {
             routes.forEach(({match, router, method}) => app[method](match, router));
         }
@@ -29,7 +30,7 @@ namespace CrookaServer {
                 const params = [];
                 if(match) params.push(match);
                 params.push(handler);
-                app.use(...params);
+                app.use.apply(params)
             });
         }
 
@@ -41,11 +42,11 @@ namespace CrookaServer {
             return require('./middlewares/index');
         }
     }
-    export const init = (port) => {
+    export const init = (port: number) => {
         const server = new Server(); 
         server.init(port);
         return server
     }
 }
 
-CrookaServer.init(3000);
+CrookaServer.init(5000);

@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  be:
+    build: 
+      context: .
+      dockerfile: ./docker/dockerfile.dev
+    ports:
+      - "5000:5000"
+    volumes:
+        - .:/app
+  db:
+    image: mysql:8.0.0
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    ports:
+      - "3306:3306"
+    volumes:
+        - mysql_vol:/var/lib/mysql
+    environment:
+        MYSQL_ROOT_PASSWORD: crookaLabApp
+        MYSQL_DATABASE: crooka
+    logging:
+      driver: none
+volumes:
+  mysql_vol:
