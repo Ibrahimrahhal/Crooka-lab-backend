@@ -7,6 +7,7 @@ namespace CrookaServer {
             this.app = Express();
             const routes = this.routes;
             const middlewares
+
                 
                 = this.middlewares;
             this.registerRoutes(routes, this.app);
