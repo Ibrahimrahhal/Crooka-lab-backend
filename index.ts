@@ -1,5 +1,6 @@
 import * as Express from 'express';
 namespace CrookaServer {
+    
     class Server {
         private app:Express.Application
         init(port) {
@@ -12,7 +13,10 @@ namespace CrookaServer {
                 console.info(`Server is Listenting on port ${port}`);
             });
         }
+        
 
+        
+        
         registerRoutes(routes:Array<{
             match: string,
             router: Express.Router,
