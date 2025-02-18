@@ -6,7 +6,8 @@ namespace CrookaServer {
         init(port) {
             this.app = Express();
             const routes = this.routes;
-            const middlewares = this.middlewares;
+            const middlewares
+                = this.middlewares;
             this.registerRoutes(routes, this.app);
             this.registerMiddlewares(middlewares, this.app)
             this.app.listen(port, () => {
