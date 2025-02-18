@@ -16,6 +16,7 @@ namespace CrookaServer {
         
 
         
+        
         registerRoutes(routes:Array<{
             match: string,
             router: Express.Router,
