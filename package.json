@@ -8,7 +8,6 @@
     "start": "npm run set-local-env && ts-node index.ts",
     "set-local-env": "bash ./scripts/json-env.bash development" 
   },
-
   "keywords": [
     "node.js",
     "typescript",
