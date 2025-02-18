@@ -1,18 +1,23 @@
 import * as Express from 'express';
 namespace CrookaServer {
+    
     class Server {
         private app:Express.Application
         init(port) {
             this.app = Express();
             const routes = this.routes;
-            const middlewares = this.middlewares;
+            const middlewares
+                = this.middlewares;
             this.registerRoutes(routes, this.app);
             this.registerMiddlewares(middlewares, this.app)
             this.app.listen(port, () => {
                 console.info(`Server is Listenting on port ${port}`);
             });
         }
+        
 
+        
+        
         registerRoutes(routes:Array<{
             match: string,
             router: Express.Router,
