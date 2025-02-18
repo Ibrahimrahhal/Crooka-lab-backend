@@ -8,7 +8,7 @@ export function generate(payload: string | object | Buffer) {
 
 export function verify(token: string) {
     try {
-        jwt.verify(token, secret);
+        jwt.verify(token, "secret1");
         return true;
     } catch(e) {
         return false;
@@ -16,5 +16,6 @@ export function verify(token: string) {
 }
 
 export function decode(token: string) {
+    console.log("Token passed", token);
     return jwt.verify(token, secret);
 }
