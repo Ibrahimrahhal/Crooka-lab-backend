@@ -1,5 +1,6 @@
 import * as Express from 'express';
 namespace CrookaServer {
+    
     class Server {
         private app:Express.Application
         init(port) {
