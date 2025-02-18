@@ -9,7 +9,6 @@
     "set-local-env": "bash ./scripts/json-env.bash development" 
   },
 
-  
   "keywords": [
     "node.js",
     "typescript",
