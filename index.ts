@@ -13,6 +13,7 @@ namespace CrookaServer {
                 console.info(`Server is Listenting on port ${port}`);
             });
         }
+        
 
         
         registerRoutes(routes:Array<{
