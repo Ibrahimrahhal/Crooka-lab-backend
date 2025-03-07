@@ -6,6 +6,8 @@ export function generate(payload: string | object | Buffer) {
     return jwt.sign(payload, secret, { algorithm: 'HS256',  expiresIn: '999d'});
 }
 
+
+
 export function verify(token: string) {
     try {
         jwt.verify(token, secret);
