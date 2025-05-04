@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run set-local-env && ts-node index.ts",
     "set-local-env": "bash ./scripts/json-env.bash development" 
+    
   },
   "keywords": [
     "node.js",
